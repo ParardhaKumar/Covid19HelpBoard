@@ -1,0 +1,29 @@
+<%- include("header") %>
+<h1>People Requiring Aid </h1>
+
+<table class="table">
+  <thead class="black white-text">
+    <tr>
+      <th scope="col">Address</th>
+      <th scope="col">Contact</th>
+      <th scope="col">Requirement</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+
+
+    <% users.forEach(function(user){ %>
+      <tr>
+          <td> <%=  user.address %> </td>
+          <td> <%=  user.contact %> </td>
+          <td> <%=  user.requirement %> </td>
+          <!-- <strong> Ambulance Required </strong> <%=  user.ambulance %> <br> -->
+          <!--<strong> Other Requirements </strong> <%=  user.other %> <br> -->
+      </tr>
+    <% }) %>
+
+  </tbody>
+  </table>
+
+<%- include("footer") %>
