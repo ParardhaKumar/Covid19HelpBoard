@@ -1,8 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
+
+body{
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
 .wrapper{
   /* Location of the image */
-  height: 87vh;
+  height: 100vh;
 
-  background-image: url(../img/landing.jpeg);
+  background-image: url(../img/landing2.jpg);
 
   /* Background image is centered vertically and horizontally at all times */
   background-position: center center;
@@ -12,7 +19,7 @@
 
   /* Background image is fixed in the viewport so that it doesn't move when
      the content's height is greater than the image's height */
-  background-attachment: fixed;
+  background-size: cover;
 
   /* This is what makes the background image rescale based
      on the container's size */
@@ -25,8 +32,46 @@
 
 .hero{
   color: #fff;
+  font-family: 'Bebas Neue', cursive;
 }
 
-.foot{
-  background-color: white;
+.caption{
+  font-size: 15vw;
+  line-height: 80%;
+  padding: 1rem;
+}
+
+.subtext{
+  font-size: 2vw;
+  margin-left: 2rem;
+}
+
+.counter{
+  padding-top: 70%;
+}
+
+/* .counter-border{
+  border: 6px;
+  border-color: white;
+  border-style: solid;
+  padding-top: 1.5rem;
+  padding-left: 1rem;
+  margin-right: 2rem;
+} */
+
+.counter-caption{
+  font-size: 1.5vw;
+}
+
+.counter-number{
+  font-size: 5vw;
+}
+
+.landing_section{
+  height: 5vh;
+}
+
+.footwrap{
+  color: white;
+  padding-bottom: 0.1rem;
 }
