@@ -1,6 +1,7 @@
 <%- include("header") %>
 <div class="wrapper">
   <div class="hero">
+    
     <!-- NAV SECTION START -->
     <div class="nav">
 
@@ -29,19 +30,19 @@
                 <div class="counter-caption">
                   Number of Confirmed Cases
                 </div>
-                <div class="counter-number" id="cases">724</div>
+                <div class="counter-number" id="cases"><%= total %></div>
               </div>
               <div class="col-4">
                 <div class="counter-caption">
                   Number of Recoveries
                 </div>
-                <div class="counter-number" id="recov">66</div>
+                <div class="counter-number" id="recov"><%= discharged %></div>
               </div>
               <div class="col-4">
                 <div class="counter-caption">
                   Number of Deaths
                 </div>
-                <div class="counter-number" id="deaths">17</div>
+                <div class="counter-number" id="deaths"><%= deaths %></div>
               </div>
             </div>
           </div>

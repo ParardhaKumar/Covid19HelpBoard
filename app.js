@@ -2,6 +2,7 @@ var express = require("express");
 var app = express();
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
+var request = require("request");
 
 mongoose.connect("mongodb://localhost/covid19_helpboard");
 
@@ -41,7 +42,15 @@ app.set("view engine", "ejs");
 
 app.get("/", function(req, res){
   //res.send("COVID-19 HELPBOARD");
-  res.render("landing");
+  request("https://api.rootnet.in/covid19-in/stats/latest", function(error, response, body){
+    if(!error && response.statusCode == 200){
+      var parsedData = JSON.parse(body);
+      var total = parsedData["data"]["summary"]["total"];
+      var discharged = parsedData["data"]["summary"]["discharged"];
+      var deaths = parsedData["data"]["summary"]["deaths"];
+      res.render("landing", {total: total, discharged: discharged, deaths: deaths});
+    }
+  })
 });
 
 app.get("/sos", function(req,res){
