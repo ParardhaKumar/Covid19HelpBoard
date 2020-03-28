@@ -4,19 +4,27 @@
 <table class="table">
   <thead class="black white-text">
     <tr>
+      <th scope="col">Pincode</th>
+      <th scope="col">Name</th>
       <th scope="col">Address</th>
       <th scope="col">Contact</th>
-      <th scope="col">Requirement</th>
+      <th scope="col">Medicine</th>
+      <th scope="col">Rations</th>
+      <th scope="col">Ambulance</th>
+      <th scope="col">Other Requirements</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-
-
     <% users.forEach(function(user){ %>
       <tr>
+          <td> <%=  user.pincode %> </td>
+          <td> <%=  user.name %> </td>
           <td> <%=  user.address %> </td>
           <td> <%=  user.contact %> </td>
+          <td> <%=  user.medicine %>  </td>
+          <td> <%=  user.ration %> </td>
+          <td> <%=  user.ambulance %> </td>
           <td> <%=  user.requirement %> </td>
           <!-- <strong> Ambulance Required </strong> <%=  user.ambulance %> <br> -->
           <!--<strong> Other Requirements </strong> <%=  user.other %> <br> -->

@@ -2,9 +2,14 @@ var mongoose = require("mongoose");
 
 // Schema
 var userSchema = new mongoose.Schema({
+  pincode: Number,
+  name: String,
   address: String,
   contact: Number,
-  requirement: String
+  requirement: String,
+  medicine: String,
+  ration: String,
+  ambulance: String
 });
 
 module.exports = mongoose.model("User", userSchema);

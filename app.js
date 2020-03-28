@@ -33,6 +33,13 @@ passport.use(new localStrategy(NGOUser.authenticate()));
 passport.serializeUser(NGOUser.serializeUser());
 passport.deserializeUser(NGOUser.deserializeUser());
 
+//Use the below template to delete any test users
+User.remove({contact:0}, function(err, users){
+  if(err){
+    console.log(err);
+  }
+});
+
 app.get("/", function(req, res){
   //res.send("COVID-19 HELPBOARD");
   request("https://api.rootnet.in/covid19-in/stats/latest", function(error, response, body){
@@ -58,11 +65,25 @@ app.get("/sos", isLoggedIn, function(req,res){
 });
 
 app.post("/sos", function(req, res){
+
+  console.log(req.body);
+
+  var pincode = req.body.pincode;
+  var name = req.body.name;
   var address = req.body.address;
   var contact = req.body.contact;
   var requirement = req.body.requirement;
-
-  var newUser = {address: address, contact: contact, requirement: requirement};
+  var medicine = req.body.medicine ? "Yes" : "No";
+  var ration = req.body.ration ? "Yes" : "No";
+  var ambulance = req.body.ambulance ? "Yes" : "No";
+  var newUser = {pincode: pincode,
+                 name: name,
+                 address: address,
+                 contact: contact,
+                 requirement: requirement,
+                 medicine: medicine,
+                 ration: ration,
+                 ambulance: ambulance};
 
   User.create(newUser, function(err, user){
     if(err){
