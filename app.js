@@ -18,8 +18,20 @@ mongoose.connect("mongodb://localhost/covid19_helpboard");
 // ];
 
 app.use(bodyParser.urlencoded({extended:true}));
-app.use(express.static("public"));
+app.use(express.static(__dirname + "/public"));
 app.set("view engine", "ejs");
+
+// Passport Configuration
+app.use(require("express-session")({
+  secret: "Made by Parardha & Prajneya",
+  resave: false,
+  saveUninitialized: false
+}));
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(new localStrategy(NGOUser.authenticate()));
+passport.serializeUser(NGOUser.serializeUser());
+passport.deserializeUser(NGOUser.deserializeUser());
 
 app.get("/", function(req, res){
   //res.send("COVID-19 HELPBOARD");
@@ -34,7 +46,7 @@ app.get("/", function(req, res){
   })
 });
 
-app.get("/sos", function(req,res){
+app.get("/sos", isLoggedIn, function(req,res){
   User.find({}, function(err, users){
     if(err){
       console.log(err);
@@ -65,9 +77,47 @@ app.post("/sos", function(req, res){
   res.redirect("sos");
 });
 
-app.get("/new", function(req,res){
+app.get("/sos/new", function(req,res){
   res.render("new");
 });
+
+app.get("/register", function(req, res){
+  res.render("register");
+});
+
+app.post("/register", function(req, res){
+  var newNGOUser = new NGOUser({username: req.body.username});
+  NGOUser.register(newNGOUser, req.body.password, function(err, ngoUser){
+    if(err){
+      console.log(err);
+      res.redirect("register");
+    }
+    passport.authenticate("local")(req, res, function(){
+        res.redirect("sos");
+      });
+  });
+});
+
+app.get("/login", function(req, res){
+  res.render("login");
+});
+
+app.post("/login", passport.authenticate("local", {successRedirect: "/sos",
+                                                   failureRedirect: "/login"
+                                                  }),function(req, res){
+});
+
+app.get("/logout", function(req, res){
+  req.logout();
+  res.redirect("landing");
+});
+
+function isLoggedIn(req, res, next){
+  if(req.isAuthenticated()){
+    return next();
+  }
+  res.redirect("login");
+}
 
 app.get("*", function(req, res){
   //res.send("COVID-19 HELPBOARD");
