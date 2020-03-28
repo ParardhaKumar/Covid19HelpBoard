@@ -8,7 +8,13 @@
     </div>
 
     <!-- NAV SECTION END -->
-
+    <div class="row">
+      <div class="col-12">
+        <div class="login" onclick="window.location.href='login'">
+          Login
+        </div>
+      </div>
+    </div>
     <div class="row">
       <div class="col-6">
         <div class="caption">
@@ -22,10 +28,28 @@
 
         <div class="subtext"> Welcome to the COVID-19 HelpBoard! </div>
         <div class="get-started">
-          <button class="btn emer-but btn-success">Report an Emergency</button>
+          <button class="btn emer-but btn-success" onclick="window.location.href='sos/new'">Report an Emergency</button>
         </div>
       </div>
       <div class="col-6">
+        <div class="data-summary">
+          <div class="row">
+            <div class="col-6">
+             <div class="supporting-links">
+               <div class="link-box">
+                 Feels like I have the symptoms
+               </div>
+             </div>
+            </div>
+            <div class="col-6">
+             <div class="supporting-links">
+               <div class="link-box">
+                 I have an idea and want to help!
+               </div>
+             </div>
+            </div>
+          </div>
+        </div>
         <div class="counter">
           <div class="counter-border">
             <div class="row">
@@ -51,7 +75,7 @@
             <div class="row">
               <div class="col-10">
                 <div class="source-text">
-                  Source: <a href="https://www.mohfw.gov.in/"> The Ministry of Health and Family Welfare </a>
+                  Source: <a href="https://www.mohfw.gov.in/"> The Ministry of Health and Family Welfare, Govt. of India </a>
                 </div>
               </div>
               <div class="col-2">
@@ -65,8 +89,6 @@
     </div>
 
   </div>
-  <div class="landing_section">
-
-  </div>
-  <%- include("footer") %>
 </div>
+
+<%- include("footer") %>
