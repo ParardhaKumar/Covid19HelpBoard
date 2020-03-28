@@ -3,31 +3,12 @@ var app = express();
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
 var request = require("request");
+var passport = require("passport");
+var localStrategy = require("passport-local");
+var NGOUser = require("./models/ngo-user");
+var User = require("./models/user");
 
 mongoose.connect("mongodb://localhost/covid19_helpboard");
-
-// Schema Setup
-var userSchema = new mongoose.Schema({
-  address: String,
-  contact: Number,
-  requirement: String
-});
-
-var User = mongoose.model("User", userSchema);
-
-// User.create({
-//   "address": "Granate Hill",
-//   "contact": +1404232323,
-//   "requirement": "Oxygen Cylinders",
-// }, function(err, user){
-//   if(err){
-//     console.log(err);
-//   }
-//   else{
-//     console.log("New User Created");
-//     console.log(user);
-//   }
-// })
 
 // var users = [{
 //           "address": "Some place in India",
