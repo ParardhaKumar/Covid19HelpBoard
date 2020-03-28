@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap')
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 body{
+  background-color: black;
 }
 
 .wrapper{
-  height: 100vh;
   background-image: url(../img/landing2.jpg);
   background-position: center center;
   background-repeat: no-repeat;
@@ -57,7 +58,8 @@ body{
 }
 
 .link-box{
-  max-width: 38vh;
+  color: #ffd500;
+  max-width: 25vh;
   border-style: solid;
   padding: 0.5rem;
   border-width: 1px;
@@ -66,7 +68,7 @@ body{
 }
 
 .link-box:hover{
-  background: rgba(0, 27, 97, 0.6);
+  background: rgba(255, 245, 196, 0.3);
   cursor: pointer;
 }
 
@@ -112,15 +114,15 @@ body{
 }
 
 .emer-but:hover{
-  background-color: #006c00 !important;
+  background-color: red !important;
 }
 
 .form-wrapper{
   /* height: 100vh;
   background: #000046;  /* fallback for old browsers
   background: -webkit-linear-gradient(to top, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6
-  background: linear-gradient(to top, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  height: 100vh;
+  background: linear-gradient(to top, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+
+  height: 100vh; */
   background-image: url(../img/form.jpg);
   background-position: center center;
   background-repeat: no-repeat;
@@ -135,6 +137,7 @@ body{
   margin-right: 5%;
   border-radius: 25px;
   min-height: 90vh;
+  margin-bottom: 1rem;
 }
 
 .form-container{
@@ -154,6 +157,7 @@ body{
   padding: 2rem;
   margin: 2rem;
   border-radius: 25px;
+
 }
 
 .form-box input{
@@ -174,6 +178,50 @@ body{
   margin-bottom: auto;
 }
 
+.t-box{
+  text-align: center;
+}
+
+.t-caption{
+  font-size: 2vw;
+  color: black;
+}
+
+.t-wrap{
+  margin: 2rem 1rem 1rem;
+  box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
+}
+
+table{
+  font-family: 'Roboto', sans-serif !important;
+  color: black !important;
+  padding-top: 2rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: normal;
+  border: none;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 100%;
+  white-space: nowrap;
+  background-color: white;
+}
+
+table td, table th{
+  text-align: center;
+  padding: 2rem;
+}
+
+table td{
+  border-right: 1px solid #f8f8f8;
+  font-size: 1vw;
+}
+
+table thead th{
+  color: #ffffff;
+  background: #4FC3A1;
+}
+
 @media only screen and (max-width: 990px) {
   .form-container{
     margin-top: -2px;
@@ -189,10 +237,16 @@ body{
 }
 
 .login-wrapper{
-  height: 100vh;
   background: #2980B9;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to top, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to top, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.aid-wrapper{
+  min-height: 100vh;
+  background: #2980B9;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .login-box{
@@ -201,6 +255,7 @@ body{
   border-radius: 10px;
   padding: 1.5rem;
   margin-top: 25%;
+  margin-bottom: 25%;
   color: black;
 }
 
@@ -224,7 +279,6 @@ body{
   background-color: rgba(0, 20, 47, 0.4);
 }
 
-.footwrap{
+footer{
   color: white;
-  padding-bottom: 0.1rem;
 }
