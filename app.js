@@ -65,7 +65,7 @@ app.post("/sos", function(req, res){
   res.redirect("sos");
 });
 
-app.get("/sos/new", function(req,res){
+app.get("/new", function(req,res){
   res.render("new");
 });
 

@@ -1,32 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
 
 body{
-  overflow-x: hidden;
-  overflow-y: hidden;
 }
 
 .wrapper{
-  /* Location of the image */
   height: 100vh;
-
   background-image: url(../img/landing2.jpg);
-
-  /* Background image is centered vertically and horizontally at all times */
   background-position: center center;
-
-  /* Background image doesn't tile */
   background-repeat: no-repeat;
-
-  /* Background image is fixed in the viewport so that it doesn't move when
-     the content's height is greater than the image's height */
   background-size: cover;
-
-  /* This is what makes the background image rescale based
-     on the container's size */
-  /* background-size: cover; */
-
-  /* Set a background color that will be displayed
-     while the background image is loading */
   background-color: #464646;
 }
 
@@ -38,7 +20,8 @@ body{
 .caption{
   font-size: 15vw;
   line-height: 80%;
-  padding: 1rem;
+  margin-left: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 .subtext{
@@ -67,8 +50,105 @@ body{
   font-size: 5vw;
 }
 
+.source-text{
+  font-size: 1vw !important;
+  text-align: center;
+}
+
+.get-started{
+  margin-left: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.emer-but{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  font-size: 2vw;
+  background: transparent !important;
+}
+
+.emer-but:hover{
+  background-color: #006c00 !important;
+}
+
 .landing_section{
-  height: 5vh;
+  height: 1vh;
+}
+
+.form-wrapper{
+  /* height: 100vh;
+  background: #000046;  /* fallback for old browsers
+  background: -webkit-linear-gradient(to top, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6
+  background: linear-gradient(to top, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 100vh;
+  background-image: url(../img/form.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #464646;
+}
+
+.v-align{
+  padding: 1rem;
+  background: rgba(27, 27, 27, 0.6);
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 25px;
+  min-height: 90vh;
+}
+
+.form-container{
+  padding-top: 4vh;
+  padding-bottom: 1vh;
+}
+
+.head-center{
+  text-align: center;
+  font-size: 2vw;
+}
+
+.form-box{
+  border-style: solid !important;
+  border: 2px;
+  border-color: white;
+  padding: 2rem;
+  margin: 2rem;
+  border-radius: 25px;
+}
+
+.form-box input{
+  margin-bottom: 1rem;
+}
+
+.form-submit{
+  padding: 0.5rem 2rem;
+  font-size: 2.5vh !important;
+}
+
+.form-check-label{
+  margin-top: -0.8rem !important;
+}
+
+.map-container{
+  margin-top: 50%;
+  margin-bottom: auto;
+}
+
+@media only screen and (max-width: 990px) {
+  .form-container{
+    margin-top: -2px;
+  }
+  .v-align{
+    margin: 2px;
+    min-height: 50px;
+  }
+  .map-container{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 }
 
 .footwrap{
