@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
 
 body{
-  overflow-x: hidden;
 }
 
 .wrapper{
@@ -95,14 +94,15 @@ body{
 .v-align{
   padding: 1rem;
   background: rgba(27, 27, 27, 0.6);
-  margin-left: 25%;
-  margin-right: 25%;
+  margin-left: 5%;
+  margin-right: 5%;
   border-radius: 25px;
+  min-height: 90vh;
 }
 
 .form-container{
-  padding-top: 8rem;
-  padding-bottom: 1rem;
+  padding-top: 4vh;
+  padding-bottom: 1vh;
 }
 
 .head-center{
@@ -126,6 +126,29 @@ body{
 .form-submit{
   padding: 0.5rem 2rem;
   font-size: 2.5vh !important;
+}
+
+.form-check-label{
+  margin-top: -0.8rem !important;
+}
+
+.map-container{
+  margin-top: 50%;
+  margin-bottom: auto;
+}
+
+@media only screen and (max-width: 990px) {
+  .form-container{
+    margin-top: -2px;
+  }
+  .v-align{
+    margin: 2px;
+    min-height: 50px;
+  }
+  .map-container{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 }
 
 .footwrap{
