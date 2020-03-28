@@ -1,7 +1,40 @@
-<h1>Login</h1>
+<%- include("header") %>
+<div class="login-wrapper">
+  <div class="hero">
+    <div class="row">
+      <div class="col-2">
 
-<form action="/login" method="POST">
-  <input type="text" name="username" placeholder="Username">
-  <input type="password" name="password" placeholder="Password">
-  <button>Login</button>    
-</form>
+      </div>
+      <div class="col-8">
+        <div class="login-box">
+          <center class="login-box-caption">Login</center>
+          <div class="row">
+            <div class="col-lg-4 col-sm-12">
+              <form action="/login" method="POST">
+                <label for="username">Username</label>
+                <input type="text" name="username" class="form-control form-control-lg" id="username" placeholder="Enter username"> <br>
+                <label for="password">Password</label>
+                <input type="password" name="password" class="form-control form-control-lg" id="username" placeholder="Enter password"> <br>
+                <button class="btn login-but form-submit">Login</button>
+              </form>
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <div class="login-details">
+                Don't have an account? <br>
+                If you're an NGO or a government official looking to help, contact us using the information below and we will provide you with an account. <br> <br>
+                <a href="mailto: prajneya.kumar@research.iiit.ac.in"> PRAJNEYA KUMAR </a> <br>
+                <a href="mailto: parardhakumar@gmail.com"> PARARDHA KUMAR </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<%- include("footer") %>
