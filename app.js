@@ -8,6 +8,8 @@ var localStrategy = require("passport-local");
 var NGOUser = require("./models/ngo-user");
 var User = require("./models/user");
 
+var loc;
+
 mongoose.connect("mongodb://localhost/covid19_helpboard");
 
 // var users = [{
@@ -34,11 +36,11 @@ passport.serializeUser(NGOUser.serializeUser());
 passport.deserializeUser(NGOUser.deserializeUser());
 
 //Use the below template to delete any test users
-User.remove({contact:0}, function(err, users){
-  if(err){
-    console.log(err);
-  }
-});
+// User.remove({contact:0}, function(err, users){
+//   if(err){
+//     console.log(err);
+//   }
+// });
 
 app.get("/", function(req, res){
   //res.send("COVID-19 HELPBOARD");
@@ -85,17 +87,16 @@ app.post("/sos", function(req, res){
                  ration: ration,
                  ambulance: ambulance};
 
-  User.create(newUser, function(err, user){
-    if(err){
-      console.log(err);
-    }
-    else{
-      console.log("New User Created");
-      console.log(user);
-    }
-  });
-  //res.send("Hit the POST Route");
-  res.redirect("sos");
+   User.create(newUser, function(err, user){
+     if(err){
+       console.log(err);
+     }
+     else{
+       console.log("New User Created");
+       console.log(user);
+     }
+   });
+   res.redirect("sos");
 });
 
 app.get("/sos/new", function(req,res){
@@ -106,7 +107,7 @@ app.get("/register", function(req, res){
   res.render("register");
 });
 
-app.post("/register", function(req, res){
+app.post("/register", isLoggedIn, function(req, res){
   var newNGOUser = new NGOUser({username: req.body.username});
   NGOUser.register(newNGOUser, req.body.password, function(err, ngoUser){
     if(err){
