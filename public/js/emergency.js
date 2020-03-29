@@ -12,7 +12,7 @@ function retrieveState(){
           if(result[0]["Status"] === "Success"){
             var loc = result[0]["PostOffice"][0]["State"];
             document.getElementById("displayState").style.display = "block";
-            document.getElementById("displayState").innerHTML += loc;
+            document.getElementById("displayState").innerHTML = "You are in <span style='color:yellow;'>" + loc + "</span>";
             fetch("https://api.rootnet.in/covid19-in/contacts").then(function(body){
               var parsedData = body.json();
               //console.log(parsedData);
@@ -24,7 +24,7 @@ function retrieveState(){
                     //console.log(result["data"]["contacts"]["regional"][i]["loc"]);
                     if(result["data"]["contacts"]["regional"][i]["loc"]==loc){
                       document.getElementById("displayNum").style.display = "block";
-                      document.getElementById("displayNum").innerHTML += result["data"]["contacts"]["regional"][i]["number"]
+                      document.getElementById("displayNum").innerHTML = "Your <span style='color:red;'> emergency contact </span> is <span style='color:red;'>" + result["data"]["contacts"]["regional"][i]["number"] + "</span>"
                     }
                   }
                 }
