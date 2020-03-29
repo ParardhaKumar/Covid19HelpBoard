@@ -131,7 +131,7 @@ app.post("/login", passport.authenticate("local", {successRedirect: "/sos",
 
 app.get("/logout", function(req, res){
   req.logout();
-  res.redirect("landing");
+  res.redirect("/");
 });
 
 function isLoggedIn(req, res, next){
