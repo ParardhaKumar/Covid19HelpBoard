@@ -7,6 +7,7 @@ body{
 }
 
 .wrapper{
+  min-height: 100vh;
   background-image: url(../img/landing2.jpg);
   background-position: center center;
   background-repeat: no-repeat;
@@ -141,8 +142,8 @@ body{
 }
 
 .form-wrapper{
-  /* height: 100vh;
-  background: #000046;  /* fallback for old browsers
+  min-height: 100vh;
+  /*background: #000046;  /* fallback for old browsers
   background: -webkit-linear-gradient(to top, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6
   background: linear-gradient(to top, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+
   height: 100vh; */
@@ -230,14 +231,15 @@ table{
   color: black !important;
   padding-top: 2rem;
   border-radius: 5px;
-  font-size: 1rem;
+  font-size: 1vw;
   font-weight: normal;
   border: none;
   border-collapse: collapse;
   width: 100%;
-  max-width: 100%;
+  max-width: 100vw;
   white-space: nowrap;
   background-color: white;
+  margin: 1vw;
 }
 
 table td, table th{
@@ -273,14 +275,12 @@ table thead th{
     margin-bottom: 10px;
   }
   .data-summary{
+    text-align: center;
     margin-top: 1%;
-    margin-left: 20%;
-    margin-right: 20%;
   }
   .counter{
-    margin-left: 20%;
-    margin-right: 20%;
     text-align: center;
+    margin-top: 1%;
   }
   .caption{
     display: none;
@@ -291,6 +291,10 @@ table thead th{
     margin-left: 0;
   }
   .get-started{
+    margin-left: 0;
+    text-align: center;
+  }
+  .supporting-links{
     text-align: center;
   }
   .alt-caption{
@@ -299,9 +303,15 @@ table thead th{
     font-size: 3vw;
     display: block;
   }
+  .link-box{
+    max-width: 100vw;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
 }
 
 .login-wrapper{
+  min-height: 100vh;
   background: #2980B9;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to top, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to top, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
