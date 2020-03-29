@@ -8,9 +8,9 @@ var localStrategy = require("passport-local");
 var NGOUser = require("./models/ngo-user");
 var User = require("./models/user");
 
-var loc;
-
-mongoose.connect("mongodb://localhost/covid19_helpboard");
+var db_url = process.env.DATABASEURL || "mongodb://localhost/covid19_helpboard";
+console.log(db_url);
+mongoose.connect(db_url);
 
 // var users = [{
 //           "address": "Some place in India",
@@ -107,7 +107,7 @@ app.get("/register", function(req, res){
   res.render("register");
 });
 
-app.post("/register", isLoggedIn, function(req, res){
+app.post("/register", function(req, res){
   var newNGOUser = new NGOUser({username: req.body.username});
   NGOUser.register(newNGOUser, req.body.password, function(err, ngoUser){
     if(err){
