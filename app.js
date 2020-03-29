@@ -8,9 +8,9 @@ var localStrategy = require("passport-local");
 var NGOUser = require("./models/ngo-user");
 var User = require("./models/user");
 
-var db_url = process.env.DATABASEURL || "mongodb://localhost/covid19_helpboard";
-db_url = "mongodb+srv://parardha:<PASSWORD>@cluster0-1h8io.mongodb.net/test?retryWrites=true&w=majority";
-console.log(db_url);
+// var db_url = process.env.DATABASEURL || "mongodb://localhost/covid19_helpboard";
+// db_url = "mongodb+srv://parardha:<PASSWORD>@cluster0-1h8io.mongodb.net/test?retryWrites=true&w=majority";
+// console.log(db_url);
 mongoose.connect(db_url);
 
 // var users = [{
