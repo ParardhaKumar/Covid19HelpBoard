@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Mukta&display=swap');
 
 body{
   background-color: black;
@@ -258,7 +259,7 @@ table thead th{
   background: #4FC3A1;
 }
 
-@media only screen and (max-width: 990px) {
+@media only screen and (max-width: 995px) {
   .form-container{
     margin-top: -2px;
   }
@@ -329,6 +330,9 @@ table thead th{
   .form-wrapper{
     background-image: url(../img/form-mobile.jpg);
   }
+  .help-details{
+      font-size: 3vw;
+  }
 }
 
 .login-wrapper{
@@ -386,7 +390,7 @@ table thead th{
   border-width: 3px;
   border-color: #ffd700;
   min-height: 80vh;
-  margin-top: 7rem;
+  margin-top: 0.5rem;
   margin-left: 3rem;
   margin-right: 2rem;
   margin-bottom: 1rem;
@@ -394,7 +398,7 @@ table thead th{
 
 .help-caption{
   text-align: center;
-  font-size: 5vh;
+  font-size: 4vw;
   padding-top: 2rem;
 }
 
@@ -407,6 +411,7 @@ table thead th{
   color: white !important;
   padding-top: 1.5rem !important;
   padding: 2rem;
+  margin-bottom: 7.5rem;
 }
 
 .help-button{
@@ -414,19 +419,30 @@ table thead th{
   border-width: 3px;
   text-align: center;
   padding: 1rem;
-  margin-left: 5rem;
+  margin-left: 6rem;
   margin-right: 5rem;
   border-radius: 10px;
   border-color: grey;
   margin-bottom: 1rem;
+  position: absolute;
+  bottom: 4rem;
+  left: 0;
+  right: 0;
 }
 
 .help-button:hover{
   background: rgba(57, 97, 127, 0.8);
   color: white;
   border-color: white;
-  transition: 0.5s;
+  transition: 0.3s;
   cursor: pointer;
+}
+
+.corona-caption{
+  font-family: 'Mukta', sans-serif;
+  text-align: center;
+  padding-top: 0.5rem;
+  font-size: 8vh;
 }
 
 
