@@ -15,7 +15,7 @@
             <input type="text" name="title" class="form-control form-control-lg" placeholder="Give your idea a title" required> <br>
             <label for="username">Suggestion/Idea</label>
             <textarea name="content" class="form-control form-control-lg" rows="8" placeholder="Explain your idea in detail" required></textarea> <br>
-            <button> Submit </button>
+            <button class="btn btn-primary"> Submit </button>
           </form>
         </div>
       </div>
@@ -29,7 +29,7 @@
                 <%= idea.content %>
               </div>
               <div class="idea-author">
-                <span style="color: white;">AUTHOR: </span><%= idea.author %>
+                <span style="color: white;">SUGGESTED BY: </span><%= idea.author %>
               </div>
               <div class="idea-time">
                 <%= idea.created %>
