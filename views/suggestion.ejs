@@ -1,0 +1,7 @@
+<h1>Ideas Page</h1>
+
+<% suggestion.forEach(function(idea){ %>
+    <h4> <%= idea.title %> </h4>
+    <p><%= idea.body %> </p>
+    <strong>Created at: </strong> <%= idea.created %><br>
+<% }); %>
