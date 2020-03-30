@@ -27,7 +27,7 @@
         </div>
 
         <div class="subtext"> Welcome to the COVID-19 HelpBoard! </div>
-        <div class="alt-caption"> <span style="color:orange;">#India</span> fights <span style="color:green;">Corona</span> </div>
+        <div class="alt-caption"> <span style="color:orange;">#India</span> </div> <div class="alt-caption"> fights </div> <div class="alt-caption"> <span style="color:green;">Corona</span> </div>
         <div class="get-started">
           <button class="btn emer-but btn-danger" onclick="window.location.href = '/sos/new';">Report an Emergency</button>
         </div>
@@ -37,7 +37,7 @@
           <div class="row">
             <div class="col-sm-12 col-lg-4">
              <div class="supporting-links">
-               <div class="link-box">
+               <div class="link-box" onclick="window.location.href = '/corona';">
                  Feels like I have the symptoms
                </div>
              </div>
@@ -61,19 +61,19 @@
         <div class="counter">
           <div class="counter-border">
             <div class="row">
-              <div class="col-sm-12 col-lg-4">
+              <div class="col-4">
                 <div class="counter-caption">
                   Number of Confirmed Cases
                 </div>
                 <div class="counter-number" id="cases"><%= total %></div>
               </div>
-              <div class="col-sm-12 col-lg-4">
+              <div class="col-4">
                 <div class="counter-caption">
                   Number of Recoveries
                 </div>
                 <div class="counter-number" id="recov"><%= discharged %></div>
               </div>
-              <div class="col-sm-12 col-lg-4">
+              <div class="col-4">
                 <div class="counter-caption">
                   Number of Deaths
                 </div>
