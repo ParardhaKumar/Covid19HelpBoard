@@ -107,6 +107,10 @@ app.get("/register", function(req, res){
   res.render("register");
 });
 
+app.get("/corona", function(req, res){
+  res.render("corona");
+});
+
 app.post("/register", function(req, res){
   var newNGOUser = new NGOUser({username: req.body.username});
   NGOUser.register(newNGOUser, req.body.password, function(err, ngoUser){
