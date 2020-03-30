@@ -5,6 +5,7 @@ var mongoose = require("mongoose");
 var request = require("request");
 var passport = require("passport");
 var localStrategy = require("passport-local");
+var methodOverride = require("method-override");
 var NGOUser = require("./models/ngo-user");
 var User = require("./models/user");
 var Suggestion = require("./models/suggestion")
@@ -23,6 +24,7 @@ mongoose.connect(db_url);
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(__dirname + "/public"));
 app.set("view engine", "ejs");
+app.use(methodOverride('_method'));
 
 // Passport Configuration
 app.use(require("express-session")({
@@ -182,6 +184,18 @@ app.post("/idea", function(req, res){
         }
     });
   res.redirect("/idea");
+});
+
+app.delete("/sos/:id", function(req, res){
+  User.findByIdAndRemove(req.params.id, function(err){
+    if(err){
+      console.log(err);
+      res.redirect("/sos");
+    }
+    else{
+      res.redirect("/sos");
+    }
+  });
 });
 
 app.get("*", function(req, res){

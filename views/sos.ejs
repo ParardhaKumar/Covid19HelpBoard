@@ -38,6 +38,11 @@
                   <td> <%=  user.ration %> </td>
                   <td> <%=  user.ambulance %> </td>
                   <td> <%=  user.requirement %> </td>
+                  <td>
+                    <form action="/sos/<%= user._id %>?_method=DELETE" method="POST">
+                      <button class="btn btn-danger"> Delete </button>
+                    </form>
+                  </td>
                   <!-- <strong> Ambulance Required </strong> <%=  user.ambulance %> <br> -->
                   <!--<strong> Other Requirements </strong> <%=  user.other %> <br> -->
               </tr>
