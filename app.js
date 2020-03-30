@@ -7,6 +7,7 @@ var passport = require("passport");
 var localStrategy = require("passport-local");
 var NGOUser = require("./models/ngo-user");
 var User = require("./models/user");
+var Suggestion = require("./models/suggestion")
 
 var db_url = process.env.DATABASEURL || "mongodb://localhost/covid19_helpboard";
 console.log(db_url);
@@ -140,6 +141,44 @@ function isLoggedIn(req, res, next){
   }
   res.redirect("login");
 }
+
+app.get("/idea", function(req, res){
+  Suggestion.find({}, function(err, suggestion){
+    if(err){
+      console.log(err);
+    }
+    else{
+      console.log(suggestion);
+      res.render("suggestion", {suggestion: suggestion});
+    }
+  });
+});
+
+app.post("/idea", function(req, res){
+  var author = req.body.author;
+  var title = req.body.title;
+  var content = req.body.content;
+  var date = new Date();
+  // var created = data.month() + " " + date.getDate() + ", " + date.getYear()
+
+  var newIdea = {
+      author: author,
+      title: title,
+      content: content,
+      created: date
+  };
+
+  Suggestion.create(newIdea, function(err, suggestion){
+        if(err){
+          console.log(err);
+          res.render("404");
+        }
+        else{
+          console.log("New Idea Created!");
+        }
+    });
+  res.redirect("/idea");
+});
 
 app.get("*", function(req, res){
   //res.send("COVID-19 HELPBOARD");

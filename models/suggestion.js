@@ -2,8 +2,9 @@ var mongoose = require("mongoose");
 
 // Schema
 var suggestionSchema = new mongoose.Schema({
+  author: String,
   title: String,
-  body: String,
+  content: String,
   created: {type: Date, default: Date.now},
   //upvotes: Number
 });
