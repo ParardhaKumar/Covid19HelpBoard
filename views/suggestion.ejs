@@ -1,0 +1,15 @@
+<h1>Ideas Page</h1>
+
+<% suggestion.forEach(function(idea){ %>
+    <h4> <%= idea.title %> </h4>
+    <p> <%= idea.content %> </p>
+    <i> <%= idea.author %> </i>
+    <strong>Created at: </strong> <%= idea.created %><br>
+<% }); %>
+
+<form action="/idea" method="POST">
+  Name: <input type="text" name="author">
+  Title: <input type="text" name="title">
+  Suggestion/Idea: <textarea name="content" rows="8" cols="80"></textarea>
+  <button> Submit </button>
+</form>
