@@ -114,6 +114,10 @@ app.get("/corona", function(req, res){
   res.render("corona");
 });
 
+app.get("/vulnerability", function(req, res){
+  res.render("vulnerability");
+});
+
 app.post("/register", function(req, res){
   var newNGOUser = new NGOUser({username: req.body.username});
   NGOUser.register(newNGOUser, req.body.password, function(err, ngoUser){

@@ -387,6 +387,10 @@ table thead th{
 
 .corona-wrapper{
   min-height: 100vh;
+  background-image: url(../img/corona.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color: black;
 }
 
@@ -536,6 +540,36 @@ table thead th{
 
 .cOverflow{
   overflow: hidden;
+}
+
+#resizeThis{
+  margin-top: -3rem;
+}
+
+.vul-wrapper{
+  min-height: 100vh;
+  background-color: black;
+}
+
+.vul-input{
+  padding-top: 20rem;
+  text-align: center;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.vul-input input{
+  background: transparent;
+  text-align: center;
+  color: white !important;
+}
+
+.vul-input input:focus{
+  background: transparent;
+}
+
+.vul-data{
+  font-size: 4vh;
 }
 
 footer{
