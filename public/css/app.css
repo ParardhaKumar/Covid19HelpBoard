@@ -260,6 +260,9 @@ table thead th{
 }
 
 @media only screen and (max-width: 995px) {
+  body{
+    overflow: scroll;
+  }
   .form-container{
     margin-top: -2px;
   }
@@ -332,6 +335,9 @@ table thead th{
   }
   .help-details{
       font-size: 3vw;
+  }
+  .scroll-card{
+    position: static;
   }
 }
 
@@ -445,6 +451,91 @@ table thead th{
   font-size: 8vh;
 }
 
+.idea-wrapper{
+  min-height: 100vh;
+  background-color: black;
+  overflow: hidden;
+}
+
+.icaption{
+  padding-top: 2rem;
+  font-size: 7vw;
+  text-align: center;
+}
+
+.idea-card{
+  background: rgba(27, 27, 27, 0.3);
+  /* background-color: #ebebeb; */
+  color: black;
+  padding: 1rem;
+  margin: 2.5rem;
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
+  border-radius: 15px;
+}
+
+.idea-card:hover{
+  transform: translateY(-5px) scale(1.005) translateZ(0);
+  box-shadow: 0 7px 30px #fff;
+}
+
+.idea-title{
+  font-size: 2vw;
+  color: blue;
+}
+
+.idea-content{
+  font-family: 'Raleway', sans-serif;
+  color: white;
+}
+
+.idea-author{
+  color: blue;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.idea-time{
+  text-align: right;
+  color: white;
+}
+
+.idea-form{
+  padding: 5rem;
+}
+
+.idea-form input{
+  font-family: 'Raleway', sans-serif;
+  background: transparent;
+  color: white;
+}
+
+.idea-form textarea{
+  font-family: 'Raleway', sans-serif;
+  background: transparent;
+}
+
+.scroll-card{
+  position: absolute;
+  overflow-y: scroll;
+  height: 100%;
+  top: 15rem;
+  bottom: -15rem;
+  right: 0;
+}
+
+.scroll-card::-webkit-scrollbar{
+  display: none;
+}
+
+.last-card{
+  height: 30vh;
+}
+
+.cOverflow{
+  overflow: hidden;
+}
 
 footer{
   color: white;
