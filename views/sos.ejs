@@ -24,6 +24,8 @@
               <th scope="col">Rations</th>
               <th scope="col">Ambulance</th>
               <th scope="col">Other Requirements</th>
+              <th scope="col">Assigned To</th>
+              <th scope="col">Actions</th>
             </tr>
           </thead>
           <tbody>
@@ -38,6 +40,7 @@
                   <td> <%=  user.ration %> </td>
                   <td> <%=  user.ambulance %> </td>
                   <td> <%=  user.requirement %> </td>
+                  <td> <%=  user.assignedTo %> </td>
                   <td>
                     <form action="/sos/<%= user._id %>?_method=DELETE" method="POST">
                       <button class="btn btn-danger"> Delete </button>
