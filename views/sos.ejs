@@ -42,12 +42,16 @@
                   <td> <%=  user.requirement %> </td>
                   <td> <%=  user.assignedTo %> </td>
                   <td>
-                    <form action="/sos/<%= user._id %>?_method=DELETE" method="POST">
-                      <button class="btn btn-danger"> Delete </button>
-                    </form>
+                    <% if (user.assignedTo === "Not Assigned"){ %>
+                      <form action="/sos/<%= user._id %>?_method=PUT" method="POST">
+                        <button class="btn btn-success"> Assign This To Me </button>
+                      </form>
+                    <% }else { %>
+                      <form action="/sos/<%= user._id %>?_method=DELETE" method="POST">
+                        <button class="btn btn-danger"> Delete </button>
+                      </form>
+                    <% } %>
                   </td>
-                  <!-- <strong> Ambulance Required </strong> <%=  user.ambulance %> <br> -->
-                  <!--<strong> Other Requirements </strong> <%=  user.other %> <br> -->
               </tr>
             <% }) %>
 
