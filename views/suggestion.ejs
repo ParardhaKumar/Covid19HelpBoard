@@ -1,15 +1,46 @@
-<h1>Ideas Page</h1>
+<%- include("header") %>
+<body id="idea-body" class="cOverflow">
+<div class="idea-wrapper">
+  <div class="hero">
+    <div class="icaption">
+      Ideas Page
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-lg-6">
+        <div class="idea-form">
+          <form action="/idea" method="POST">
+            <label for="username">Name</label>
+            <input type="text" name="author" class="form-control form-control-lg" placeholder="Enter your Name"> <br>
+            <label for="username">Title</label>
+            <input type="text" name="title" class="form-control form-control-lg" placeholder="Give your idea a title"> <br>
+            <label for="username">Suggestion/Idea</label>
+            <textarea name="content" class="form-control form-control-lg" rows="8" placeholder="Explain your idea in detail"></textarea> <br>
+            <button> Submit </button>
+          </form>
+        </div>
+      </div>
+      <div class="col-sm-12 col-lg-6 scroll-card" id="resizeThis">
+          <% suggestion.forEach(function(idea){ %>
+            <div class="idea-card">
+              <div class="idea-title">
+                <%= idea.title %>
+              </div>
+              <div class="idea-content">
+                <%= idea.content %>
+              </div>
+              <div class="idea-author">
+                <span style="color: white;">AUTHOR: </span><%= idea.author %>
+              </div>
+              <div class="idea-time">
+                <%= idea.created %>
+              </div>
+            </div>
+          <% }); %>
+            <div class="last-card">
+            </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<% suggestion.forEach(function(idea){ %>
-    <h4> <%= idea.title %> </h4>
-    <p> <%= idea.content %> </p>
-    <i> <%= idea.author %> </i>
-    <strong>Created at: </strong> <%= idea.created %><br>
-<% }); %>
-
-<form action="/idea" method="POST">
-  Name: <input type="text" name="author">
-  Title: <input type="text" name="title">
-  Suggestion/Idea: <textarea name="content" rows="8" cols="80"></textarea>
-  <button> Submit </button>
-</form>
+<%- include("footer") %>
