@@ -9,7 +9,12 @@ var userSchema = new mongoose.Schema({
   requirement: String,
   medicine: String,
   ration: String,
-  ambulance: String
+  ambulance: String,
+  assignedTo: {
+    type: String,
+    ref: "NGOUser",
+    default: "Not Assigned"
+  }
 });
 
 module.exports = mongoose.model("User", userSchema);

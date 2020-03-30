@@ -6,6 +6,7 @@ var request = require("request");
 var passport = require("passport");
 var localStrategy = require("passport-local");
 var methodOverride = require("method-override");
+var session = require("express-session");
 var NGOUser = require("./models/ngo-user");
 var User = require("./models/user");
 var Suggestion = require("./models/suggestion")
@@ -32,6 +33,7 @@ app.use(require("express-session")({
   resave: false,
   saveUninitialized: false
 }));
+//app.use(session({ secret: 'Made by Parardha & Prajneya' }));
 app.use(passport.initialize());
 app.use(passport.session());
 passport.use(new localStrategy(NGOUser.authenticate()));
@@ -145,7 +147,7 @@ function isLoggedIn(req, res, next){
   if(req.isAuthenticated()){
     return next();
   }
-  res.redirect("login");
+  res.redirect("/login");
 }
 
 app.get("/idea", function(req, res){
@@ -186,16 +188,51 @@ app.post("/idea", function(req, res){
   res.redirect("/idea");
 });
 
-app.delete("/sos/:id", function(req, res){
-  User.findByIdAndRemove(req.params.id, function(err){
+app.put("/sos/:id", isLoggedIn, function(req, res){
+  console.log(req.user._id);
+  User.findByIdAndUpdate(req.params.id, {assignedTo: req.user.username}, function(err, user_in_need_of_help){
     if(err){
       console.log(err);
       res.redirect("/sos");
     }
     else{
-      res.redirect("/sos");
+      console.log(user_in_need_of_help.name + " is being assigned to");
+      console.log(req.user.username);
+      //user.assignedTo = req.NGOUser;
+      NGOUser.findByIdAndUpdate(req.user._id, {$addToSet: {casesAssigned: [user_in_need_of_help]}}, function(err, ngouser){
+        if(err){
+          console.log(err);
+          res.redirect("/sos");
+        }
+        else{
+          console.log(ngouser.username + " has been assigned " + user_in_need_of_help + "'s Case'");
+          res.redirect("/sos");
+        }
+      });
+      //req.user.casesAssigned.push(user_in_need_of_help);
     }
   });
+  //res.send("Edit User Assigned To ROUTE");
+});
+
+app.delete("/sos/:id", isLoggedIn, function(req, res){
+    var id = req.params.id
+    User.findById(id, function(err, user){
+      if(user.assignedTo !== req.user.username){
+        res.send("This Case is NOT Assigned to you. Delete Request Rejected");
+      }
+      else{
+        User.findByIdAndRemove(req.params.id, function(err){
+          if(err){
+            console.log(err);
+            res.redirect("/sos");
+          }
+          else{
+            res.redirect("/sos");
+          }
+        });
+      }
+    });
 });
 
 app.get("*", function(req, res){

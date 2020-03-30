@@ -3,7 +3,13 @@ var passportLocalMongoose = require("passport-local-mongoose");
 // Schema
 var ngoUserSchema = new mongoose.Schema({
   username: String,
-  password: String
+  password: String,
+  casesAssigned: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User"
+    }
+  ]
 });
 
 ngoUserSchema.plugin(passportLocalMongoose);
