@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Mukta&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 body{
   background-color: black;
@@ -514,7 +515,7 @@ table thead th{
 
 .idea-title{
   font-size: 3.5vh;
-  color: #2b32c2;
+  color: #ef5455;
 }
 
 .idea-content{
@@ -524,14 +525,15 @@ table thead th{
 
 .idea-author{
   font-size: 2vh;
-  color: #5b32a2;
+  color: #ef5455;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  font-style: italic;
 }
 
 .idea-time{
   text-align: right;
-  color: black;
+  color: #7ba5cf;
 }
 
 .idea-form{
@@ -602,6 +604,10 @@ table thead th{
 .vul-data{
   font-size: 4vh;
   padding-top: 20rem;
+}
+
+.form-control{
+  font-family: 'Poppins', sans-serif;
 }
 
 footer{
