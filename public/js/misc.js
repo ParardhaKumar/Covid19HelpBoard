@@ -1,7 +1,7 @@
 var resize = document.querySelector("#resizeThis");
 var rBody = document.querySelector("#idea-body");
 
-window.addEventListener("resize", function() {
+function setIdeas(){
   if (window.innerWidth < 995){
     document.documentElement.scrollTop = 0;
     document.body.scrollTop = 0;
@@ -14,4 +14,6 @@ window.addEventListener("resize", function() {
     resize.classList.add("scroll-card");
     rBody.classList.add("cOverflow");
   }
-});
+}
+
+setIdeas();
