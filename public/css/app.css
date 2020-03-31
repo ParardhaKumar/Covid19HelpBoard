@@ -559,7 +559,7 @@ table thead th{
 .scroll-card{
   position: absolute;
   overflow-y: scroll;
-  height: 47rem;
+  height: 70vh;
   top: 13.5rem;
   bottom: 0;
   right: 0;
