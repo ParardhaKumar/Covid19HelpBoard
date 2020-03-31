@@ -12,6 +12,7 @@
     <div class="row">
       <div class="col-12">
         <div class="login" onclick="window.location.href='login'">Login</div>
+        <div class="faq" onclick="window.location.href='https://www.mohfw.gov.in/pdf/FAQ.pdf'">FAQ</div>
       </div>
     </div>
     <div class="row">
@@ -50,8 +51,15 @@
             </div>
             <div class="col-sm-12 col-lg-4">
              <div class="supporting-links">
-               <div class="link-box" onclick="window.location.href = '/vulnerability';">
-                 How vulnerable am I?
+               <div class="link-box" onclick="window.location.href = 'http://bit.ly/2WylPf9';">
+                 How Vulnerable am I?
+               </div>
+             </div>
+            </div>
+            <div class="col-sm-12 mobile-only">
+             <div class="supporting-links">
+               <div class="link-box" onclick="window.open('https://www.mohfw.gov.in/pdf/FAQ.pdf', '_blank')">
+                 FAQ
                </div>
              </div>
             </div>
@@ -82,7 +90,7 @@
             <div class="row">
               <div class="col-12">
                 <div class="source-text">
-                  Source: <a href="https://www.mohfw.gov.in/"> The Ministry of Health and Family Welfare, Govt. of India </a>
+                  Source: <a href="https://www.mohfw.gov.in/"> Ministry of Health and Family Welfare, Govt. of India </a>
                 </div>
               </div>
             </div>
@@ -95,4 +103,41 @@
   </div>
 </div>
 
-<%- include("footer") %>
+<div class="about-wrapper">
+  <div class="hero">
+    <div class="row">
+      <div class="col-12">
+        <div class="about-caption"> <span style="font-weight: bold;">ABOUT</span> <span>US</span></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-8">
+          <div class="about-details idea-card">
+            <p>This system is placed to serve as a unified platform for NGOs throughout India to collaborate and work together to bridge the gap between “demand in emergencies” and “supplies for help”. This platform has been built majorly to record all kinds of emergencies of people currently in quarantine from all over the country, and for collaborating NGOs to address them as quickly as possible. There is no limit to the emergencies that can be served if we come together during times of crisis. </p> 
+            <p>If there is anything that you are facing alone during the current lockdown or even if you are willing to report an emergency happening nearby, you can record it here and we will make sure that the required help is in place as early as possible.
+            Our network will be placed in different parts of the country and as we practice this support more, we will be able to assist efficiently. All the cases will be managed centrally and locally depending on its severity. The system will be monitored constantly by us. We will be bringing in more workforce as the situation demands. </p>
+            <p>We are a group of alumni and students from IIT Dhanbad and IIIT Hyderabad committed to helping the society as consultants during the current crisis. </p>
+            <p>If you are an NGO and are willing to collaborate, please contact us <a href="https://www.facebook.com/parardha.kumar.7">here.</a></p>
+          </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Footer -->
+<footer class="page-footer font-small blue pt-4">
+   <!-- Copyright -->
+   <div class="footer-copyright text-center py-3">Made with <i class="fa fa-heart" style="color:red;"></i> by Parardha & Prajneya
+   </div>
+   <!-- Copyright -->
+</footer>
+<!-- Footer -->
+</body>
+
+<script src="/js/counter.js"></script>
+<script src="/js/emergency.js"></script>
+<script src="/js/vulnerable.js"></script>
+<script src="/js/misc.js"></script>
+</html>
