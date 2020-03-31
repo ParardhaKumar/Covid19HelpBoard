@@ -346,6 +346,10 @@ table thead th{
     text-align: center;
     margin-left: 35%;
     margin-right: 35%;
+    z-index: 4;
+  }
+  .login-box{
+    margin: 1rem;
   }
   .link-box{
     max-width: 100vw;
