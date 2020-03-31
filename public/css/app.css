@@ -19,6 +19,16 @@ body{
   margin-bottom: 1rem;
 }
 
+.about-wrapper{
+  min-height: 100vh;
+  background-image: url(../img/about.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #464646;
+  margin-bottom: 1rem;
+}
+
 .hero{
   color: #fff;
   font-family: 'Bebas Neue', cursive;
@@ -155,6 +165,28 @@ body{
   margin-bottom: 2rem;
 }
 
+.about-caption{
+  font-family: 'Arvo', serif;
+  text-align: center;
+  font-size: 10vw;
+  margin-right: 3rem;
+  margin-top: 5rem;
+  color: black;
+  line-height: 85%;
+}
+
+.about-details{
+  font-family: 'Raleway', sans-serif;
+  padding: 3rem !important;
+  margin-left: 3rem;
+  margin-right: 5rem;
+  max-width: 90vw;
+  font-size: 1.5vw;
+  margin-bottom: 2rem;
+  margin-top: 5rem;
+  color: black;
+}
+
 .emer-but{
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -223,6 +255,7 @@ body{
 
 .form-box input{
   margin-bottom: 1rem;
+  font-size: 1vw;
 }
 
 .form-submit{
@@ -396,6 +429,9 @@ table thead th{
   }
   .scroll-card{
     position: static;
+  }
+  .form-box input{
+    font-size: 2.5vw;
   }
 }
 
