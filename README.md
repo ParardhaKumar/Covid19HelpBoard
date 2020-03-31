@@ -50,13 +50,13 @@ The application is written using Express Framework and Node Package Manager (for
 ### Screenshots
 ![](https://github.com/ParardhaKumar/Covid19HelpBoard/blob/master/screens/home.png)
 
-![](https://github.com/ParardhaKumar/Covid19HelpBoard/blob/master/screens/dashboard.png)
-
-![](https://github.com/ParardhaKumar/Covid19HelpBoard/blob/master/screens/login.png)
-
 ![](https://github.com/ParardhaKumar/Covid19HelpBoard/blob/master/screens/symptoms.png)
 
 ![](https://github.com/ParardhaKumar/Covid19HelpBoard/blob/master/screens/form.png)
+
+![](https://github.com/ParardhaKumar/Covid19HelpBoard/blob/master/screens/login.png)
+
+![](https://github.com/ParardhaKumar/Covid19HelpBoard/blob/master/screens/dashboard.png)
 
 ## Hosting
 The application has been hosted on Heroku [here](https://indiafightscorona.herokuapp.com/)
