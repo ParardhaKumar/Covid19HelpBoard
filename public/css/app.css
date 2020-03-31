@@ -414,6 +414,10 @@ table thead th{
   background-color: rgba(0, 20, 47, 0.4);
 }
 
+.login-but{
+  background-color: #7fc4a5;
+}
+
 .corona-wrapper{
   min-height: 100vh;
   background-image: url(../img/corona.jpg);
