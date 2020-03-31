@@ -1,7 +1,9 @@
 document.getElementById("displayState").style.display = "none";
 document.getElementById("displayNum").style.display = "none";
 
-function retrieveState(){
+var pindiv = document.querySelector("#pindiv");
+
+function retrieveState2(){
   pincode = document.getElementById("pin").value;
   if(pincode.length==6){
     console.log(pincode)
@@ -9,8 +11,9 @@ function retrieveState(){
         var parsedData = body.json();
         parsedData.then(function(result){
           if(result[0]["Status"] === "Success"){
+            pindiv.classList.remove("col-12")
+            pindiv.classList.add("col-6");
             var loc = result[0]["PostOffice"][0]["State"];
-            console.log(loc)
             document.getElementById("displayState").style.display = "block";
             document.getElementById("displayState").innerHTML = "You are in <span style='color:yellow;'>" + loc + "</span>";
             fetch("https://api.rootnet.in/covid19-in/contacts").then(function(body){
