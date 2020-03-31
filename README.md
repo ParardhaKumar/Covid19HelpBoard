@@ -1,7 +1,10 @@
 # Covid19HelpBoard
+[https://indiafightscorona.herokuapp.com/](https://indiafightscorona.herokuapp.com/) <br>
 COVID19 Help-board &amp; Emergency Reporting Portal for People During Lockdown 
 
 Node Web Application to serve as a unified platform for NGOs throughout India to collaborate and work together to bridge the gap between “demand in emergencies” and “supplies for help” during lockdown.
+
+The application allows for multiple NGOs are individuals willing to help to register and then respond to emergency calls from people currently in quarantine due to ongoing lockdown in a conjunctive manner. 
 
 ## Description
 The application allows to report any kind of emergency which will be assigned to collaborating NGOs/responders (who will have a login access into the system).
@@ -41,5 +44,19 @@ The application is written using Express Framework and Node Package Manager (for
 - ejs
 - Bootstrap 4
 
-## How to run it?
+### FlowChart for Responder Journey
+![](https://github.com/ParardhaKumar/Covid19HelpBoard/blob/master/screens/NGOFlow.png)
+
+### Screenshots
+![](https://github.com/ParardhaKumar/Covid19HelpBoard/blob/master/screens/home.png)
+
+![](https://github.com/ParardhaKumar/Covid19HelpBoard/blob/master/screens/dashboard.png)
+
+![](https://github.com/ParardhaKumar/Covid19HelpBoard/blob/master/screens/login.png)
+
+![](https://github.com/ParardhaKumar/Covid19HelpBoard/blob/master/screens/symptoms.png)
+
+![](https://github.com/ParardhaKumar/Covid19HelpBoard/blob/master/screens/form.png)
+
+## Hosting
 The application has been hosted on Heroku [here](https://indiafightscorona.herokuapp.com/)
