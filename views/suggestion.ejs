@@ -3,10 +3,10 @@
 <div class="idea-wrapper">
   <div class="hero">
     <div class="icaption">
-      Ideas Page
+      <span style="color: #2b3252; font-weight: bold;">IDEAS</span> <span style="color: #Fad744;">PAGE</span>
     </div>
     <div class="row">
-      <div class="col-sm-12 col-lg-6">
+      <div class="col-sm-12 col-lg-6 left-scroll-card">
         <div class="idea-form">
           <form action="/idea" method="POST">
             <label for="username">Name</label>
@@ -29,7 +29,7 @@
                 <%= idea.content %>
               </div>
               <div class="idea-author">
-                <span style="color: white;">SUGGESTED BY: </span><%= idea.author %>
+                <span style="color: black;">SUGGESTED BY: </span><%= idea.author %>
               </div>
               <div class="idea-time">
                 <%= idea.created %>
