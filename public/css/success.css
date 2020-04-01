@@ -30,3 +30,9 @@ i {
   display: inline-block;
   margin: 0 auto;
 }
+
+.home-button{
+  margin: 1rem;
+  border-style: solid;
+  padding: 2rem;
+}
