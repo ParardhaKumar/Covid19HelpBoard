@@ -117,6 +117,10 @@ app.get("/register", function(req, res){
   res.render("register");
 });
 
+app.get("/success", function(req, res){
+  res.render("help-on-way");
+});
+
 app.get("/corona", function(req, res){
   res.render("corona");
 });
