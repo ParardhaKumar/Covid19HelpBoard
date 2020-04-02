@@ -101,12 +101,17 @@ app.post("/sos", function(req, res){
        console.log(user);
      }
    });
-   res.redirect("sos");
+   res.render("success");
 });
+
+// app.get("/success", function(req, res){
+//   res.render("success");
+// });
 
 app.get("/sos/new", function(req,res){
   res.render("new");
 });
+
 
 app.get("/register", function(req, res){
   res.render("register");
@@ -114,10 +119,6 @@ app.get("/register", function(req, res){
 
 app.get("/corona", function(req, res){
   res.render("corona");
-});
-
-app.get("/vulnerability", function(req, res){
-  res.render("vulnerability");
 });
 
 app.post("/register", function(req, res){
