@@ -104,9 +104,9 @@ app.post("/sos", function(req, res){
    res.render("success");
 });
 
-// app.get("/success", function(req, res){
-//   res.render("success");
-// });
+app.get("/success", function(req, res){
+  res.render("success");
+});
 
 app.get("/sos/new", function(req,res){
   res.render("new");
@@ -239,6 +239,7 @@ app.delete("/sos/:id", isLoggedIn, function(req, res){
       }
     });
 });
+
 
 app.get("*", function(req, res){
   //res.send("COVID-19 HELPBOARD");
