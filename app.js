@@ -112,7 +112,6 @@ app.get("/sos/new", function(req,res){
   res.render("new");
 });
 
-
 app.get("/register", function(req, res){
   res.render("register");
 });

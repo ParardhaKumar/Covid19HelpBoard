@@ -31,6 +31,8 @@ i {
   margin: 0 auto;
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 .warning {
   padding-left: 25%;
   padding-right: 25%;
@@ -55,4 +57,16 @@ a {
 
 a:hover {
   background-color: #2c2c2c;
+=======
+=======
+>>>>>>> 089d3ccf7030035faeb8ef245d69cdd5ee2f1bde
+.home-button{
+  margin: 1rem;
+  border-style: solid;
+  border-color: #32CD32;
+  padding: 2rem;
+<<<<<<< HEAD
+>>>>>>> Update Success Page UI
+=======
+>>>>>>> 089d3ccf7030035faeb8ef245d69cdd5ee2f1bde
 }
