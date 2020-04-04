@@ -120,6 +120,10 @@ app.get("/corona", function(req, res){
   res.render("corona");
 });
 
+app.get("/blog", function(req, res){
+  res.send("SITE is under maintanance");
+})
+
 app.post("/register", function(req, res){
   var newNGOUser = new NGOUser({username: req.body.username});
   NGOUser.register(newNGOUser, req.body.password, function(err, ngoUser){
